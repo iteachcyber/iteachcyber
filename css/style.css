@@ -561,6 +561,52 @@ section + section { border-top: 1px solid var(--hairline); }
 .resource-card .btn-ghost { margin-top: 16px; font-size: 0.8rem; padding: 10px 18px; }
 
 /* ==========================================================================
+   follow / social CTA section (homepage)
+   ========================================================================== */
+
+.follow-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.follow-panel h2 { margin-bottom: 0.3em; }
+.follow-panel p { margin: 0; }
+
+.follow-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.follow-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.follow-link:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.follow-link svg { width: 18px; height: 18px; flex: none; }
+
+@media (max-width: 700px) {
+  .follow-panel { flex-direction: column; align-items: flex-start; }
+}
+
+/* ==========================================================================
    footer
    ========================================================================== */
 
@@ -596,6 +642,32 @@ section + section { border-top: 1px solid var(--hairline); }
   transition: color 0.15s ease;
 }
 .footer-col a:hover { color: var(--gold-bright); }
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+  color: var(--gold);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.social-links a:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.social-links svg { width: 17px; height: 17px; }
 
 .footer-bottom {
   padding-top: 24px;
